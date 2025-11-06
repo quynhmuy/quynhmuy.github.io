@@ -1,0 +1,22 @@
+.text-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+}
+.flower {
+  margin-right: 8px;
+  font-size: 1.1em;
+  display: inline-block;
+  transform: rotate(8deg);
+}
+
+.hello {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 800;
+  letter-spacing: 2px;       
+  text-shadow:
+    1px 2px 4px rgba(0,0,0,0.45),
+    0 0 12px rgba(255,255,255,0.15);
+  transform: translateZ(0);
+}
