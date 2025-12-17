@@ -1,4 +1,6 @@
- @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 html {
   scroll-behavior: smooth;
@@ -6,8 +8,8 @@ html {
 
 /* Custom CSS variables */
 :root {
-  --primary-color: #3b82f6;
-  --secondary-color: #8b5cf6;
+  --primary-color: #85b4e6;
+  --secondary-color: #6a9cd4;
 }
 
 /* Custom utilities */
@@ -24,6 +26,20 @@ html {
   }
   
   .hover-lift:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
+  }
+  
+  .bg-gradient-custom {
+    background: linear-gradient(135deg, #85b4e6 0%, #a8c9f0 100%);
+  }
+}
+
+/* Thêm animation cho hover-lift nếu cần */
+@layer components {
+  .hover-lift {
+    @apply transition-transform duration-300;
+  }
+  .hover-lift:hover {
+    @apply -translate-y-1;
   }
 }

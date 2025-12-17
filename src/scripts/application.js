@@ -1,6 +1,6 @@
- import '../css/style.css'
+import '../css/style.css'
 
-console.log('Portfolio website loaded!')
+console.log('Quynh My Portfolio loaded!')
 
 // Smooth scroll for anchor links
 document.addEventListener('DOMContentLoaded', () => {
