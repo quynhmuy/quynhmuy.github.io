@@ -8,15 +8,31 @@
   <!-- Meta tags -->
   <meta name="title" content="Quynh My - Software Engineering Student">
   <meta name="description" content="Hi! I'm Quynh My, a third-year Software Engineering student passionate about development and technology.">
-  <meta name="keywords" content="software engineering, student, developer, vietnam, portfolio">
+  <meta name="keywords" content="software engineering, student, developer, vietnam, portfolio, web developer">
   <meta name="robots" content="index, follow">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="language" content="English">
   <meta name="author" content="Quynh My">
   
   <!-- Open Graph -->
   <meta property="og:title" content="Quynh My - Software Engineering Student" />
-  <meta property="og:description" content="Third-year Software Engineering student at Vietnam–UK Institute" />
+  <meta property="og:description" content="Third-year Software Engineering student at Vietnam–UK Institute for Research and Training" />
+  <meta property="og:url" content="https://quynhmuy.github.io" />
+  <meta property="og:image" content="https://quynhmuy.github.io/public/imgs/banner.jpg" />
   <meta property="og:type" content="website" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Quynh My - Software Engineering Student">
+  <meta name="twitter:description" content="Third-year Software Engineering student at Vietnam–UK Institute for Research and Training">
+  <meta name="twitter:image" content="https://quynhmuy.github.io/public/imgs/banner.jpg">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/public/imgs/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/public/imgs/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/imgs/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/imgs/favicon-16x16.png">
+  <link rel="manifest" href="/public/imgs/site.webmanifest">
   
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -38,6 +54,11 @@
       font-style: bold;
       font-weight: 700;
     }
+    
+    /* ScrollReveal classes */
+    .banner-text, .banner-cta, .section-title, .section-content {
+      visibility: hidden;
+    }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -49,7 +70,7 @@
       <div class="max-w-6xl mx-auto flex justify-between items-center">
         <!-- Logo MY trong vòng tròn xanh -->
         <div class="flex items-center">
-          <div class="w-10 h-10 rounded-full bg-custom-blue flex items-center justify-center mr-3">
+          <div class="w-10 h-10 rounded-full bg-[#85b4e6] flex items-center justify-center mr-3">
             <span class="text-white font-bold text-xl serif-font">M</span>
           </div>
           <div class="text-xl font-bold serif-font hidden md:block">
@@ -58,10 +79,10 @@
           </div>
         </div>
         <nav class="hidden md:flex space-x-8">
-          <a href="#home" class="text-gray-600 hover:text-custom-blue transition-colors duration-300">Home</a>
-          <a href="#about" class="text-gray-600 hover:text-custom-blue transition-colors duration-300">About</a>
-          <a href="#skills" class="text-gray-600 hover:text-custom-blue transition-colors duration-300">Skills</a>
-          <a href="#contact" class="text-gray-600 hover:text-custom-blue transition-colors duration-300">Contact</a>
+          <a href="#home" class="text-gray-600 hover:text-[#85b4e6] transition-colors duration-300">Home</a>
+          <a href="#about" class="text-gray-600 hover:text-[#85b4e6] transition-colors duration-300">About</a>
+          <a href="#skills" class="text-gray-600 hover:text-[#85b4e6] transition-colors duration-300">Skills</a>
+          <a href="#contact" class="text-gray-600 hover:text-[#85b4e6] transition-colors duration-300">Contact</a>
         </nav>
         <button class="md:hidden text-gray-600">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -71,55 +92,42 @@
       </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="flex-grow flex items-center py-12 px-6 md:px-12 bg-gradient-to-br from-custom-blue to-custom-blue-light">
-      <div class="max-w-4xl mx-auto text-center">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 hero-text">
-          <span class="block">Hi! My name is</span>
-          <span class="text-white mt-4 block">QUYNH MY</span>
+    <!-- Hero Section - Banner -->
+    <section id="home" class="min-h-[90vh] flex flex-col justify-center items-center bg-cover bg-center" style="background-image: url('/public/imgs/banner.jpg')">
+      <div class="w-full lg:w-[80%] p-12 text-white backdrop-blur-sm bg-black/30">
+        <h1 class="text-6xl font-bold mb-10 grid grid-col-1 lg:gap-5 banner-text">
+          <span>Hi, my name is <span class="text-[#85b4e6]">Quynh My</span></span>
+          <span class="text-white">I'm the Software Engineering Student.</span>
         </h1>
-        <p class="text-2xl md:text-3xl text-white/90 mb-10 serif-font">
-          I am a third-year Software Engineering student at the Vietnam–UK Institute for Research and Training in.
-        </p>
-        <a href="#about" class="inline-block border-2 border-white text-white hover:bg-white hover:text-custom-blue px-8 py-3 rounded-md font-medium transition-colors duration-300 serif-font">
-          ABOUT ME
+
+        <a href="#about" class="banner-cta uppercase border-2 border-[#85b4e6] p-3 hover:bg-[#85b4e6] hover:text-white transition-colors cursor-pointer">
+          <span class="text-xl pl-8 pr-8 pt-3 pb-3 font-light focus:outline-none focus:ring focus:ring-[#85b4e6]">Know more</span>
         </a>
       </div>
     </section>
 
     <!-- About Section với Avatar bên cạnh -->
-    <section id="about" class="py-20 px-6 md:px-12 bg-white">
-      <div class="max-w-4xl mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-12 serif-font text-custom-blue">ABOUT ME</h2>
+    <section id="about" class="py-20 px-6 md:px-12 bg-[#85b4e6] text-white">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="uppercase text-2xl lg:text-5xl text-center font-bold text-white mb-12 section-title">About Me</h2>
         
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-          <!-- Avatar Column -->
-          <div class="flex justify-center">
-            <div class="w-56 h-56 md:w-64 md:h-64 rounded-full border-4 border-white shadow-xl overflow-hidden">
-              <!-- ẢNH THẬT CỦA BẠN -->
-              <img src="public/imgs/avatar.jpg" alt="Quynh My" class="w-full h-full object-cover">
-            </div>
+        <div class="grid grid-cols-1 gap-2 lg:grid-cols-3 lg:gap-8 section-content">
+          <div class="flex justify-center items-center text-center col-span-1">
+            <img class="object-cover max-w-xs lg:w-auto rounded-full border-8 border-white shadow-2xl" src="/public/imgs/avatar.jpg" title="My avatar" alt="My avatar" />
           </div>
-          
-          <!-- About Content Column -->
-          <div class="lg:col-span-2">
-            <div class="bg-gray-50 rounded-xl p-8">
-              <p class="text-lg text-gray-700 leading-relaxed mb-6 serif-font">
+          <div class="col-span-1 lg:col-span-2 flex justify-center items-center">
+            <div class="p-0 text-center lg:p-8 lg:text-start">
+              <p class="pb-3 text-lg font-light mb-5">
                 I am a third-year Software Engineering student at the Vietnam–UK Institute for Research and Training. I am passionate about software development and enjoy applying my academic knowledge to real-world projects.
               </p>
               
-              <p class="text-lg text-gray-700 leading-relaxed mb-8 serif-font">
+              <p class="pb-3 text-lg font-light mb-5">
                 My goal is to continuously improve my technical skills and grow into a professional software engineer. I'm always eager to learn new technologies and collaborate on meaningful projects.
               </p>
               
-              <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#contact" class="inline-block bg-custom-blue text-white hover:bg-custom-blue-dark px-8 py-3 rounded-md font-medium transition-colors duration-300 text-center serif-font">
-                  CONTACT ME
-                </a>
-                <a href="#" class="inline-block border border-custom-blue text-custom-blue hover:bg-custom-blue hover:text-white px-8 py-3 rounded-md font-medium transition-colors duration-300 text-center serif-font">
-                  VIEW CV
-                </a>
-              </div>
+              <a href="#contact" class="uppercase border-2 border-white p-3 text-white hover:bg-white hover:text-[#85b4e6] transition-colors cursor-pointer">
+                <span class="text-xl pl-8 pr-8 pt-3 pb-3 font-normal focus:outline-none focus:ring focus:ring-[#85b4e6]">Contact Me</span>
+              </a>
             </div>
           </div>
         </div>
@@ -129,39 +137,39 @@
     <!-- Skills Section -->
     <section id="skills" class="py-20 px-6 md:px-12 bg-gray-50">
       <div class="max-w-4xl mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-12 serif-font text-custom-blue">MY SKILLS</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <h2 class="text-3xl font-bold text-center mb-12 serif-font text-[#85b4e6] section-title">MY SKILLS</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 section-content">
           <!-- HTML/CSS Skill -->
-          <div class="bg-white p-6 rounded-xl shadow-md text-center hover-lift border-t-4 border-custom-blue">
-            <div class="w-16 h-16 rounded-full bg-custom-blue-light flex items-center justify-center mx-auto mb-4">
-              <i class="fab fa-html5 text-custom-blue text-2xl"></i>
+          <div class="bg-white p-6 rounded-xl shadow-md text-center border-t-4 border-[#85b4e6]">
+            <div class="w-16 h-16 rounded-full bg-[#a8c9f0] flex items-center justify-center mx-auto mb-4">
+              <i class="fab fa-html5 text-[#85b4e6] text-2xl"></i>
             </div>
             <h3 class="text-xl font-bold mb-2 serif-font text-gray-800">HTML/CSS</h3>
             <p class="text-gray-600">Building responsive and accessible web interfaces</p>
           </div>
           
           <!-- Java Skill -->
-          <div class="bg-white p-6 rounded-xl shadow-md text-center hover-lift border-t-4 border-custom-blue">
-            <div class="w-16 h-16 rounded-full bg-custom-blue-light flex items-center justify-center mx-auto mb-4">
-              <i class="fab fa-java text-custom-blue text-2xl"></i>
+          <div class="bg-white p-6 rounded-xl shadow-md text-center border-t-4 border-[#85b4e6]">
+            <div class="w-16 h-16 rounded-full bg-[#a8c9f0] flex items-center justify-center mx-auto mb-4">
+              <i class="fab fa-java text-[#85b4e6] text-2xl"></i>
             </div>
             <h3 class="text-xl font-bold mb-2 serif-font text-gray-800">Java</h3>
             <p class="text-gray-600">Object-oriented programming and backend development</p>
           </div>
           
           <!-- Python Skill -->
-          <div class="bg-white p-6 rounded-xl shadow-md text-center hover-lift border-t-4 border-custom-blue">
-            <div class="w-16 h-16 rounded-full bg-custom-blue-light flex items-center justify-center mx-auto mb-4">
-              <i class="fab fa-python text-custom-blue text-2xl"></i>
+          <div class="bg-white p-6 rounded-xl shadow-md text-center border-t-4 border-[#85b4e6]">
+            <div class="w-16 h-16 rounded-full bg-[#a8c9f0] flex items-center justify-center mx-auto mb-4">
+              <i class="fab fa-python text-[#85b4e6] text-2xl"></i>
             </div>
             <h3 class="text-xl font-bold mb-2 serif-font text-gray-800">Python</h3>
             <p class="text-gray-600">Scripting, automation, and data analysis</p>
           </div>
           
           <!-- Software Development -->
-          <div class="bg-white p-6 rounded-xl shadow-md text-center hover-lift border-t-4 border-custom-blue">
-            <div class="w-16 h-16 rounded-full bg-custom-blue-light flex items-center justify-center mx-auto mb-4">
-              <i class="fas fa-laptop-code text-custom-blue text-2xl"></i>
+          <div class="bg-white p-6 rounded-xl shadow-md text-center border-t-4 border-[#85b4e6]">
+            <div class="w-16 h-16 rounded-full bg-[#a8c9f0] flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-laptop-code text-[#85b4e6] text-2xl"></i>
             </div>
             <h3 class="text-xl font-bold mb-2 serif-font text-gray-800">Software Dev</h3>
             <p class="text-gray-600">Full software development lifecycle and best practices</p>
@@ -171,71 +179,75 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 px-6 md:px-12 bg-custom-blue text-white">
-      <div class="max-w-3xl mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-8 serif-font">CONTACT</h2>
-        <p class="text-2xl mb-6 serif-font">
-          I LOOK FORWARD TO WORKING WITH YOU
+    <section id="contact" class="bg-white min-h-[500px] w-full flex flex-col justify-center items-center p-6 lg:p-12 text-gray-800">
+      <div class="w-full lg:w-[60%] mb-5">
+        <h2 class="uppercase text-2xl lg:text-5xl text-center font-bold mb-6 section-title">Contact</h2>
+        <p class="flex flex-col justify-center items-center pt-5 pb-5 text-center section-content">
+          <span class="text-2xl text-[#85b4e6] mb-3">I LOOK FORWARD TO WORKING WITH YOU</span>
+          <span>I'm excited about bringing my academic knowledge and passion for software development to real-world projects.</span>
         </p>
-        <p class="text-lg mb-10 max-w-2xl mx-auto opacity-90">
-          I'm excited about bringing my academic knowledge and passion for software development to real-world projects.
-        </p>
-        
-        <!-- Contact Button -->
-        <a href="mailto:quynhmy092@gmail.com" class="inline-block bg-white text-custom-blue hover:bg-gray-100 px-10 py-4 rounded-md font-medium text-lg transition-colors duration-300 serif-font hover-lift mb-12">
-          <i class="fas fa-envelope mr-2"></i> SEND EMAIL
-        </a>
-        
-        <!-- Social Links -->
-        <div class="mt-8">
-          <p class="mb-6 serif-font text-xl">Connect with me</p>
-          <div class="flex justify-center space-x-8">
-            <!-- GitHub -->
-            <a href="https://github.com/quynhmuy" target="_blank" 
-               class="bg-white/10 hover:bg-white/20 w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 hover-lift">
-              <i class="fab fa-github text-2xl"></i>
-            </a>
-            
-            <!-- Gmail -->
-            <a href="mailto:quynhmy092@gmail.com" 
-               class="bg-white/10 hover:bg-white/20 w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 hover-lift">
-              <i class="fas fa-envelope text-2xl"></i>
-            </a>
-            
-            <!-- LinkedIn (Placeholder) -->
-            <a href="#" 
-               class="bg-white/10 hover:bg-white/20 w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 hover-lift opacity-70 cursor-not-allowed"
-               title="Coming soon">
-              <i class="fab fa-linkedin text-2xl"></i>
-            </a>
-          </div>
+      </div>
+      
+      <a href="mailto:quynhmy092@gmail.com?subject=Hi, Quynh My! I want to connect with you for work&body=Please describe your work or projects requirements"
+        class="border-2 border-[#85b4e6] pl-8 pr-8 pt-3 pb-3 bg-[#85b4e6] text-white hover:bg-white hover:text-[#85b4e6] transition-colors cursor-pointer section-content">
+        <span class="text-xl uppercase font-light focus:outline-none focus:ring focus:ring-[#85b4e6]">Send An Email Now</span>
+      </a>
+      
+      <!-- Social Links -->
+      <div class="mt-12 w-full lg:w-[60%]">
+        <p class="text-center mb-6 serif-font text-xl">Connect with me</p>
+        <div class="flex justify-center space-x-8">
+          <!-- GitHub -->
+          <a href="https://github.com/quynhmuy" target="_blank" 
+             class="w-14 h-14 rounded-full bg-gray-100 hover:bg-[#85b4e6] hover:text-white flex items-center justify-center transition-all duration-300">
+            <i class="fab fa-github text-2xl"></i>
+          </a>
           
-          <div class="mt-8 text-sm opacity-80">
-            <p>GitHub: <a href="https://github.com/quynhmuy" target="_blank" class="underline hover:opacity-90">github.com/quynhmuy</a></p>
-            <p class="mt-2">Email: quynhmy092@gmail.com</p>
-          </div>
+          <!-- Gmail -->
+          <a href="mailto:quynhmy092@gmail.com" 
+             class="w-14 h-14 rounded-full bg-gray-100 hover:bg-[#85b4e6] hover:text-white flex items-center justify-center transition-all duration-300">
+            <i class="fas fa-envelope text-2xl"></i>
+          </a>
+          
+          <!-- LinkedIn (Placeholder) -->
+          <a href="#" 
+             class="w-14 h-14 rounded-full bg-gray-100 hover:bg-[#85b4e6] hover:text-white flex items-center justify-center transition-all duration-300 opacity-70 cursor-not-allowed"
+             title="Coming soon">
+            <i class="fab fa-linkedin text-2xl"></i>
+          </a>
+        </div>
+        
+        <div class="mt-8 text-center text-sm text-gray-600">
+          <p>GitHub: <a href="https://github.com/quynhmuy" target="_blank" class="underline hover:text-[#85b4e6]">github.com/quynhmuy</a></p>
+          <p class="mt-2">Email: quynhmy092@gmail.com</p>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 px-6 md:px-12 bg-gray-800 text-gray-300">
-      <div class="max-w-6xl mx-auto">
-        <div class="flex flex-col md:flex-row justify-between items-center">
-          <div class="mb-4 md:mb-0 text-center md:text-left">
-            <div class="flex items-center mb-2">
-              <div class="w-8 h-8 rounded-full bg-custom-blue flex items-center justify-center mr-3">
-                <span class="text-white font-bold text-sm serif-font">MY</span>
-              </div>
-              <p class="serif-font text-lg">Quynh My</p>
-            </div>
-            <p class="text-sm">© 2025 All rights reserved.</p>
-          </div>
-          <div class="text-center md:text-right">
-            <p class="serif-font">Vietnam–UK Institute for Research and Training</p>
-            <p class="text-sm mt-1">Software Engineering Student</p>
-          </div>
-        </div>
+    <footer class="bg-gray-900 min-h-[300px] pt-12 pb-12 flex flex-col justify-center items-center text-gray-300">
+      <div class="w-[60%] flex flex-col justify-center items-center">
+        <ul class="flex flex-row mb-8">
+          <li class="pl-4 pr-4 cursor-pointer hover:-translate-y-2">
+            <a href="https://github.com/quynhmuy" target="_blank">
+              <img class="w-10 grayscale hover:grayscale-0" src="/public/imgs/github.svg" alt="GitHub" />
+            </a>
+          </li>
+          <li class="pl-4 pr-4 cursor-pointer hover:-translate-y-2">
+            <a href="#" class="opacity-70 cursor-not-allowed">
+              <img class="w-10 grayscale" src="/public/imgs/linkedin.svg" alt="LinkedIn" title="Coming soon" />
+            </a>
+          </li>
+          <li class="pl-4 pr-4 cursor-pointer hover:-translate-y-2">
+            <a href="mailto:quynhmy092@gmail.com">
+              <img class="w-10 grayscale hover:grayscale-0" src="/public/imgs/email.svg" alt="Email" />
+            </a>
+          </li>
+        </ul>
+
+        <hr class="w-1/2 border-gray-700 mt-6"/>
+        <p class="text-lg text-gray-500 mt-8">© 2025 - Quynh My</p>
+        <p class="text-sm text-gray-600 mt-2">Vietnam–UK Institute for Research and Training | Software Engineering Student</p>
       </div>
     </footer>
 
@@ -243,8 +255,8 @@
 
   <script type="module" src="/src/scripts/application.js"></script>
   
+  <!-- Mobile Menu Script -->
   <script>
-    // Mobile menu toggle
     document.addEventListener('DOMContentLoaded', function() {
       const mobileMenuButton = document.querySelector('button.md\\:hidden');
       const nav = document.querySelector('nav.hidden.md\\:flex');
@@ -265,6 +277,23 @@
           nav.classList.toggle('z-50');
         });
       }
+      
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
     });
   </script>
 </body>

@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 html {
   scroll-behavior: smooth;
@@ -27,19 +25,5 @@ html {
   
   .hover-lift:hover {
     transform: translateY(-3px);
-  }
-  
-  .bg-gradient-custom {
-    background: linear-gradient(135deg, #85b4e6 0%, #a8c9f0 100%);
-  }
-}
-
-/* Thêm animation cho hover-lift nếu cần */
-@layer components {
-  .hover-lift {
-    @apply transition-transform duration-300;
-  }
-  .hover-lift:hover {
-    @apply -translate-y-1;
   }
 }
